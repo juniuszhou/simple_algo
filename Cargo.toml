@@ -1,0 +1,11 @@
+[package]
+name = "rust"
+version = "0.1.0"
+authors = ["juniuszhou <junius.zhou@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+
+[[bin]]
+name = "rust"
+path = "main.rs"
