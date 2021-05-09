@@ -169,16 +169,21 @@ mod tests {
         let distance = compute_distance(String::from("A-E-D"), graph);
         assert_eq!(distance, 0);
 
+        // c to c with 3 stops
         let result = dfs(vec![2], graph, 2, 4, false);
         assert_eq!(result, 2);
 
+        // a to c with 4 stops
         let result = bfs(vec![0], graph, 2, 4);
         assert_eq!(result, 3);
 
+        // shortest route from a to c
         assert_eq!(spfa(graph, 0, 2, false), 9);
 
+        // shortest route from b to b
         assert_eq!(spfa(graph, 1, 0, true), 9);
 
+        // different route from c to c less 30
         assert_eq!(dfs(vec![2], graph, 2, 30, true), 7);
     }
 }
